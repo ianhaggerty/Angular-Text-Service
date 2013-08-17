@@ -107,6 +107,7 @@ angular.module("textService", [])
 			 * Example usage: setLanguage("fr") // change to french and update the page
 			 */
 			setLanguage: function (language, doUpdate) {
+				if(doUpdate === undefined) doUpdate = true;
 				textService.language = language
 				$rootScope.$broadcast("languageChange")
 				return textServiceApi;
@@ -193,20 +194,3 @@ angular.module("textService", [])
 			}
 		}
 	})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
